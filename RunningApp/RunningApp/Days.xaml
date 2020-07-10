@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RunningApp.Days">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvDays" ItemSelected="lvWeeks_ItemSelected"/>
+            <Grid VerticalOptions="FillAndExpand">
+                <skia:SKCanvasView x:Name="view2" PaintSurface="OnCanvas2ViewPaintSurface" HeightRequest="200"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

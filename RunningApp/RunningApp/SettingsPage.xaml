@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RunningApp.SettingsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="0,40,0,0">
+                <Label Text="Gender" VerticalTextAlignment="Center" FontSize="20"/>
+                <Picker x:Name="gender" SelectedIndexChanged="gender_SelectedIndexChanged" WidthRequest="80">
+                    <Picker.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <Switch x:Name="unitsSwitch" IsToggled="True" Toggled="unitsSwitch_Toggled"/>
+                <Label x:Name="unitsLabel" Text="Miles" VerticalTextAlignment="Center" FontSize="20"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="DOB" VerticalTextAlignment="Center" FontSize="20"/>
+                <DatePicker x:Name="dob" DateSelected="dob_DateSelected" WidthRequest="120"/>
+            </StackLayout>
+            <Button x:Name="credits" Text="Credits" Clicked="credits_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RunningApp.EventPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="topStack" HorizontalOptions="Center" Padding="0,40,0,0">
+            <StackLayout x:Name="stack1" Orientation="Horizontal" HorizontalOptions="Center">
+                <DatePicker x:Name="date"/>
+            </StackLayout>
+            <StackLayout x:Name="stack2" Orientation="Horizontal" HorizontalOptions="Center">
+                <Label x:Name="distanceLabel" Text="Distance" VerticalTextAlignment="Center"/>
+                <Picker x:Name="mileMain" WidthRequest="30"/>
+                <Label Text="." VerticalTextAlignment="End"/>
+                <Picker x:Name="mileSecondary" WidthRequest="30"/>
+            </StackLayout>
+            <StackLayout x:Name="stack3" Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Time Hours" VerticalTextAlignment="Center"/>
+                <Picker x:Name="hours"/>
+                <Label Text=":" VerticalTextAlignment="Center"/>
+                <Picker x:Name="minutes"/>
+            </StackLayout>
+            <ListView x:Name="lvActivities" ItemSelected="lvActivities_ItemSelected"/>
+            <Grid x:Name="grid">
+                <Image x:Name="shoe" Source= "shoe.png" Grid.Column="0" Aspect="AspectFit"/>
+                <Image x:Name="stopwatch" Source="stopwatch.jpg" Grid.Column="1" Aspect="AspectFit"/>
+            </Grid>
+            <StackLayout x:Name="bottomStack" Orientation="Vertical">
+            <Button x:Name="add" Text="Add Activity" Clicked="AddClicked"/>
+            <Button x:Name="update" Text="Update Activity" Clicked="UpdateClicked"/>
+            <Button x:Name="delete" Text="Delete Activity" Clicked="DeleteClicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
